@@ -1,0 +1,20 @@
+{
+  "geofence": {
+    "pointA": {
+      "latitude": 17.156477,
+      "longitude": 16.124321
+    },
+    "pointB": {
+      "latitude": 17.156477,
+      "longitude": 16.124321
+    },
+    "pointC": {
+      "latitude": 17.156477,
+      "longitude": 16.124321
+    },
+    "pointD": {
+      "latitude": 17.156477,
+      "longitude": 16.124321
+    }
+  }
+}

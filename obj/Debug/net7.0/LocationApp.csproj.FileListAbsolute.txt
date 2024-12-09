@@ -1,0 +1,5 @@
+C:\Users\aubidi\RiderProjects\LocationApp\LocationApp\obj\Debug\net7.0\LocationApp.csproj.AssemblyReference.cache
+C:\Users\aubidi\RiderProjects\LocationApp\LocationApp\obj\Debug\net7.0\LocationApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aubidi\RiderProjects\LocationApp\LocationApp\obj\Debug\net7.0\LocationApp.AssemblyInfoInputs.cache
+C:\Users\aubidi\RiderProjects\LocationApp\LocationApp\obj\Debug\net7.0\LocationApp.AssemblyInfo.cs
+C:\Users\aubidi\RiderProjects\LocationApp\LocationApp\obj\Debug\net7.0\LocationApp.csproj.CoreCompileInputs.cache
