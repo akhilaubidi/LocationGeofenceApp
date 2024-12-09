@@ -1,7 +1,5 @@
 namespace LocationApp.models;
 
-
-
 internal class Geofence
 {
     public Point pointA { get; set; }

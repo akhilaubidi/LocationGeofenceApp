@@ -25,7 +25,8 @@ public class LocationService
         Console.WriteLine("Callback initiated.");
 
         var coordinates = GetCoordinates();
-        Console.WriteLine($"Fetched Coordinates - Latitude: {coordinates.Latitude}, Longitude: {coordinates.Longitude}");
+        Console.WriteLine(
+            $"Fetched Coordinates - Latitude: {coordinates.Latitude}, Longitude: {coordinates.Longitude}");
 
         var configData = GetConfigData();
 
@@ -38,21 +39,21 @@ public class LocationService
             var pointC = configData.geofence.pointC;
             var pointD = configData.geofence.pointD;
 
-            double minLatitude = Math.Min(pointA.latitude, pointC.latitude);
-            double maxLatitude = Math.Max(pointB.latitude, pointD.latitude);
-            double minLongitude = Math.Min(pointA.longitude, pointB.longitude);
-            double maxLongitude = Math.Max(pointC.longitude, pointD.longitude);
+            var minLatitude = Math.Min(pointA.latitude, pointC.latitude);
+            var maxLatitude = Math.Max(pointB.latitude, pointD.latitude);
+            var minLongitude = Math.Min(pointA.longitude, pointB.longitude);
+            var maxLongitude = Math.Max(pointC.longitude, pointD.longitude);
 
-            Console.WriteLine($"Geofence bounds - MinLat: {minLatitude}, MaxLat: {maxLatitude}, MinLon: {minLongitude}, MaxLon: {maxLongitude}");
+            Console.WriteLine(
+                $"Geofence bounds - MinLat: {minLatitude}, MaxLat: {maxLatitude}, MinLon: {minLongitude}, MaxLon: {maxLongitude}");
 
-            if (coordinates.Latitude >= minLatitude && coordinates.Latitude <= maxLatitude && coordinates.Longitude >= minLongitude && coordinates.Longitude <= maxLongitude)
-            {
-                ShowNotification($"Latitude: {coordinates.Latitude}, Longitude: {coordinates.Longitude} is within geofence");
-            }
+            if (coordinates.Latitude >= minLatitude && coordinates.Latitude <= maxLatitude &&
+                coordinates.Longitude >= minLongitude && coordinates.Longitude <= maxLongitude)
+                ShowNotification(
+                    $"Latitude: {coordinates.Latitude}, Longitude: {coordinates.Longitude} is within geofence");
             else
-            {
-                ShowNotification($"Latitude: {coordinates.Latitude}, Longitude: {coordinates.Longitude} is outside geofence");
-            }
+                ShowNotification(
+                    $"Latitude: {coordinates.Latitude}, Longitude: {coordinates.Longitude} is outside geofence");
         }
         else
         {
@@ -65,8 +66,8 @@ public class LocationService
         try
         {
             Console.WriteLine("Reading configuration data.");
-            string filePath = Path.Combine(AppContext.BaseDirectory, "config-policy.json");
-            string json = File.ReadAllText(filePath);
+            var filePath = Path.Combine(AppContext.BaseDirectory, "config-policy.json");
+            var json = File.ReadAllText(filePath);
             return JsonConvert.DeserializeObject<ConfigData>(json)!;
         }
         catch (Exception ex)
