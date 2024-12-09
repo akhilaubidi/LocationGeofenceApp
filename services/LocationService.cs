@@ -1,5 +1,8 @@
+using LocationApp.models;
 using Newtonsoft.Json;
 using Timer = System.Threading.Timer;
+
+namespace LocationApp.services;
 
 public class LocationService
 {
@@ -109,23 +112,4 @@ public class LocationService
     {
         _timer?.Dispose();
     }
-}
-
-internal class ConfigData
-{
-    public Geofence geofence { get; set; }
-}
-
-internal class Geofence
-{
-    public Point pointA { get; set; }
-    public Point pointB { get; set; }
-    public Point pointC { get; set; }
-    public Point pointD { get; set; }
-}
-
-internal class Point
-{
-    public double latitude { get; set; }
-    public double longitude { get; set; }
 }

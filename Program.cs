@@ -1,4 +1,5 @@
-﻿using Topshelf;
+﻿using LocationApp.services;
+using Topshelf;
 
 class Program
 {
